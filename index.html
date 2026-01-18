@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PRAYAAG 5.0</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
-  <!-- Model Viewer -->
-   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="main.css" />
  
 </head>
@@ -43,7 +41,6 @@
     autoplay
     auto-rotate 
     preload
-    background-color="black"
     rotation="0deg 0deg 0deg"
     rotation-per-second="30deg" 
     style="width: 400px; max-width: 80vw; height: 400px; margin: 30px auto">
@@ -54,9 +51,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
 
-    <p style="margin-top:20px;">January 31 & February 01, 2026</p>
+    <p>January 31 & February 01, 2026</p>
 
-    <!-- COUNTDOWN -->
     <div class="countdown" id="countdown">
       <div class="time-box">
         <span id="days">00</span>
@@ -103,22 +99,22 @@
   <section class="section" id="gallery">
     <h2>Moments from Prayaag</h2>
     <div class="gallery">
-      <img src="images/gallery1.jpg">
-      <img src="images/gallery2.jpg">
-      <img src="images/gallery3.jpg">
-      <img src="images/gallery4.jpg">
-      <img src="images/gallery5.jpg">
-      <img src="images/gallery6.jpg">
+      <img src="./assets/images/gallery1.jpg">
+      <img src="./assets/images/gallery2.jpg">
+      <img src="./assets/images/gallery3.jpg">
+      <img src="./assets/images/gallery4.jpg">
+      <img src="./assets/images/gallery5.jpg">
+      <img src="./assets/images/gallery6.jpg">
+      <img src="./assets/images/gallery7.jpg">
+      <img src="./assets/images/gallery8.jpg">
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p><span>PRAYAAG 5.0</span> · LBS Institute of Technology for Women</p>
     <p>© 2026 Prayaag. All rights reserved.</p>
   </footer>
 
-  <!-- COUNTDOWN SCRIPT -->
   <script>
     const targetDate = new Date("Jan 31, 2026 09:00:00").getTime();
 
@@ -141,7 +137,6 @@
     navLinks.classList.toggle("show");
   });
 
-  // Close menu when clicking a link
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("show");
@@ -155,7 +150,5 @@
     setTimeout(() => loader.style.display = "none", 500);
   });
 </script>
-
-
 </body>
 </html>
