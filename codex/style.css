@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff;
+  min-width: 220px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 14px 18px;
+  color: #000;
+  font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.video-section {
+  height: 70vh;
+  width: 100%;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.schedule-heading {
+  text-align: center;
+  padding: 70px 10% 30px;
+}
+
+.schedule-heading h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.schedule-heading p {
+  color: #ccc;
+  font-style: italic;
+}
+
+.schedule-section {
+  padding: 50px 8% 80px;
+}
+
+.schedule-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.day {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.day h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.day p {
+  font-size: 14px;
+}
+
+.day.active {
+  border-left: 6px solid #6c3cff;
+}
+
+.day:hover {
+  transform: translateX(6px);
+}
+
+.schedule-table {
+  flex: 1;
+  background: #111;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: #2a163f;
+  padding: 18px;
+  font-weight: bold;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 18px;
+  border-top: 1px solid #333;
+  color: #ddd;
+}
+
+.events-section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.events-section h1 {
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.event-card {
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.event-card img {
+  width: 100%;
+  display: block;
+}
+
+.event-card a {
+  text-decoration: none;
+}
+
+.event-card button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-top: 1px solid #ddd;
+  transition: background 0.3s;
+}
+
+.event-card button:hover {
+  background: #f2f2f2;
+}
+
+@media (max-width: 900px) {
+  .schedule-container {
+    flex-direction: column;
+  }
+
+  .days {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .day {
+    width: 160px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
+.nav-links,
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  background: #000;
+  border-top: 1px solid #222;
+  text-align: center;
+  padding: 30px 10%;
+}
+
+.footer p {
+  color: #aaa;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.footer span {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

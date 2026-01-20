@@ -1,94 +1,95 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>CODEX | Prayag 2025</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="../assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+  <meta charset="UTF-8">
+  <title>Event Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="is-preload">
+<nav class="navbar">
+  <div class="logo">
+    <img src="codex.jpeg" alt="Codex Logo">
+  </div>
 
-<div id="wrapper">
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
 
-  <!-- Header -->
-  <header id="header" class="alt">
-    <a href="../index.html" class="logo">
-      <strong>CODEX</strong> <span>Prayag 2025</span>
-    </a>
-    <nav>
-      <a href="#menu">Menu</a>
-    </nav>
-  </header>
+    <li class="dropdown">
+      <a href="#">Event ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Caryatid</a></li>
+        <li><a href="#">Codex</a></li>
+        <li><a href="#">Vistara</a></li>
+      </ul>
+    </li>
 
-  <!-- Menu -->
-  <nav id="menu">
-    <ul class="links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="codex.html">CODEX</a></li>
-    </ul>
-  </nav>
+    <li><a href="#">Gallery</a></li>
+  </ul>
+</nav>
 
-  <!-- Banner -->
-  <section id="banner" class="major">
-    <div class="inner">
-      <header class="major">
-        <h1>CODEX</h1>
-      </header>
-      <div class="content">
-        <p><strong>Code • Create • Construct</strong><br>
-        Where logic meets innovation.</p>
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="event-video.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section class="schedule-heading">
+  <h1>EVENT SCHEDULE</h1>
+  <p>Quickly harness dynamic thinking through value added models.</p>
+</section>
+
+<section class="schedule-section">
+  <div class="schedule-container">
+
+    <div class="days">
+      <div class="day active" onclick="showDay(1)">
+        <h3>DAY 01</h3>
+        <p>31 JANUARY</p>
+      </div>
+
+      <div class="day" onclick="showDay(2)">
+        <h3>DAY 02</h3>
+        <p>1 FEBRUARY</p>
       </div>
     </div>
-  </section>
 
-  <!-- Main -->
-  <div id="main">
+    <div class="schedule-table" id="schedule"></div>
 
-    <!-- Day 1 -->
-    <section id="one" class="tiles">
+  </div>
+</section>
 
-      <article>
-        <span class="image">
-          <img src="../images/pic01.jpg" alt="" />
-        </span>
-        <header class="major">
-          <h3><a href="day1.html" class="link">DAY 1</a></h3>
-          
-        </header>
-      </article>
+<section class="events-section">
+  <h1>EVENTS</h1>
 
-      <article>
-        <span class="image">
-          <img src="../images/pic02.jpg" alt="" />
-        </span>
-        <header class="major">
-          <h3><a href="day2.html" class="link">DAY 2</a></h3>
-          
-        </header>
-      </article>
+  <div class="events-grid">
+    <div class="event-card">
+      <img src="poster1.jpg">
+      <a href="https://example.com" target="_blank">
+        <button>REGISTER NOW</button>
+      </a>
+    </div>
 
-    </section>
+    <div class="event-card">
+      <img src="poster2.jpg">
+      <a href="https://example.com" target="_blank">
+        <button>REGISTER NOW</button>
+      </a>
+    </div>
 
-    
-   
-  <!-- Footer -->
-  <footer id="footer">
-    <p><span>PRAYAAG 5.0</span> · LBS Institute of Technology for Women</p>
-    <p>© 2026 Prayaag. All rights reserved.</p>
-  </footer>
+    <div class="event-card">
+      <img src="poster3.jpg">
+      <a href="https://example.com" target="_blank">
+        <button>REGISTER NOW</button>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <p><span>PRAYAAG 5.0</span> · LBS Institute of Technology for Women</p>
+  <p>© 2026 Prayaag. All rights reserved.</p>
+</footer>
 
-</div>
-
-<!-- Scripts -->
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/jquery.scrolly.min.js"></script>
-<script src="../assets/js/jquery.scrollex.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
