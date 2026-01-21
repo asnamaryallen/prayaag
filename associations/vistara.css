@@ -446,20 +446,6 @@ body::before {
 
 .video-container video { width: 100%; display: block; aspect-ratio: 16/9; }
 
-footer {
-  background: rgba(10,10,10,0.8);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  text-align: center;
-  border-top: 1px solid rgba(220,20,60,0.2);
-  margin-top: 5rem;
-  position: relative;
-  z-index: 1;
-}
-
-footer p { margin: 0.5rem 0; color: #999; font-size: 0.9rem; }
-
-footer span { color: #dc143c; font-weight: 600; }
 
 .hero-bg-logo {
   position: absolute;
@@ -479,6 +465,135 @@ footer span { color: #dc143c; font-weight: 600; }
 .about-text { flex: 1; }
 
 .about-text h2, .about-text p { text-align: left; }
+.footer-spacer {
+  height: 120px;
+}
+
+/* FOOTER */
+.prayaag-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.prayaag-footer a:hover {
+  color: #ae2012;
+  opacity: 1;
+}
+
+.prayaag-footer {
+  background: rgba(106, 4, 15, 0.2);   /* same as navbar */
+  backdrop-filter: blur(10px);        /* glass effect */
+  -webkit-backdrop-filter: blur(10px);
+
+  color: #fff;
+  padding: 70px 0 30px;
+
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.footer-left h2 {
+   font-family: "ZenDots";
+  font-size: 2.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.footer-left p {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.footer-left span {
+  color: #ff2a2a;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* TITLES */
+.footer-middle h4,
+.footer-right h4 {
+  color: #ff2a2a;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* LINKS */
+.footer-middle a,
+.footer-right a {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  opacity: 0.75;
+}
+
+.footer-middle a:hover,
+.footer-right a:hover {
+  color: #ff2a2a;
+  opacity: 1;
+}
+
+/* SOCIALS */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.footer-socials a {
+  font-size: 1.3rem;
+  color: #fff;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ff2a2a;
+  transform: translateY(-2px);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.footer-bottom span {
+  color: #ff2a2a;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
 
 @media (max-width:768px) {
   .menu-toggle { display: block; }
