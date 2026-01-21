@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex - PRAYAAG 5.0</title>
+  <link rel="stylesheet" href="codex.css" />  
+</head>
+<body>
+  <canvas id="canvas3d"></canvas>
+  
+  <div class="content-wrapper">
+    <nav class="navbar">
+      <div class="nav-logo">PRAYAAG 5.0</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="vistara.html">Vistara</a></li>
+        <li><a href="caryatid.html">Caryatid</a></li>
+        <li><a href="codex.html">Codex</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1>CODEX</h1>
+      <p class="hero-tagline">Building Tomorrow's Infrastructure</p>
+      <p class="hero-intro">The Computer Engineering Department Association of LBS Institute of Technology for Women, dedicated to shaping future engineers through innovation, collaboration, and technical excellence at PRAYAAG 5.0.</p>
+    </section>
+
+    <section class="section about-section">
+  <div class="about-container">
+    <img src="../assets/images/codex-logo.png" class="about-logo" alt="Codex Logo">
+    <div class="about-text">
+      <h2>About Codex</h2>
+      <p>
+        Codex is the Computer Engineering Department Association at LBS Institute of Technology for Women, committed to fostering technical excellence, innovation, and professional growth among aspiring civil engineers. We bridge the gap between academic knowledge and real-world applications through hands-on projects, competitions, and workshops at PRAYAAG, our premier tech fest. From structural design challenges to sustainable construction initiatives, Caryatid empowers students to become the architects of tomorrow's built environment.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <section class="section">
+      <h2>Glimpses of Codex</h2>
+      <div class="video-container">
+        <video controls>
+          <source src="../videos/codex-highlights.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Event Schedule</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Event</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day-header" rowspan="3">Day 1</td>
+            <td class="event-name">Structural Design Challenge</td>
+            <td class="event-time">10:00 AM - 1:00 PM</td>
+          </tr>
+          <tr>
+            <td class="event-name">Concrete Mix Design Workshop</td>
+            <td class="event-time">2:00 PM - 4:30 PM</td>
+          </tr>
+          <tr>
+            <td class="event-name">Bridge Building Competition</td>
+            <td class="event-time">5:00 PM - 8:00 PM</td>
+          </tr>
+          <tr>
+            <td class="day-header" rowspan="3">Day 2</td>
+            <td class="event-name">Geotechnical Engineering Quiz</td>
+            <td class="event-time">9:30 AM - 12:00 PM</td>
+          </tr>
+          <tr>
+            <td class="event-name">Sustainable Construction Seminar</td>
+            <td class="event-time">1:30 PM - 4:00 PM</td>
+          </tr>
+          <tr>
+            <td class="event-name">CAD Modeling Contest</td>
+            <td class="event-time">4:30 PM - 7:30 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Our Events</h2>
+      <div class="events-grid">
+        <div class="event-item" data-event="1">
+          <img src="assets/images/codex/event1.jpg" alt="Event 1">
+          <div class="event-overlay">
+            <h3>Structural Design Challenge</h3>
+            <p>Test your structural analysis and design skills with real-world scenarios</p>
+          </div>
+        </div>
+
+        <div class="event-item" data-event="2">
+          <img src="assets/images/codex/event2.jpg" alt="Event 2">
+          <div class="event-overlay">
+            <h3>Bridge Building Competition</h3>
+            <p>Design and construct bridges that can withstand maximum load</p>
+          </div>
+        </div>
+
+        <div class="event-item" data-event="3">
+          <img src="assets/images/codex/event3.jpg" alt="Event 3">
+          <div class="event-overlay">
+            <h3>CAD Modeling Contest</h3>
+            <p>Showcase your technical drawing and 3D modeling expertise</p>
+          </div>
+        </div>
+
+        <div class="event-item" data-event="4">
+          <img src="assets/images/codex/event4.jpg" alt="Event 4">
+          <div class="event-overlay">
+            <h3>Concrete Mix Workshop</h3>
+            <p>Learn and experiment with different concrete mix designs</p>
+          </div>
+        </div>
+
+        <div class="event-item" data-event="5">
+          <img src="assets/images/codex/event5.jpg" alt="Event 5">
+          <div class="event-overlay">
+            <h3>Geotechnical Quiz</h3>
+            <p>Test your knowledge of soil mechanics and foundation engineering</p>
+          </div>
+        </div>
+
+        <div class="event-item" data-event="6">
+          <img src="assets/images/codex/event6.jpg" alt="Event 6">
+          <div class="event-overlay">
+            <h3>Surveying Championship</h3>
+            <p>Demonstrate precision in land surveying techniques</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="eventModal">
+      <span class="close-modal">&times;</span>
+      <div class="modal-content">
+        <img id="modalImage" src="" alt="Event">
+        <div class="modal-details">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <!-- Logo added to footer -->
+  
+      <p><span>PRAYAAG 5.0</span> · LBS Institute of Technology for Women</p>
+      <p>© 2026 Prayaag. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // 3D Canvas Animation
+    const canvas = document.getElementById('canvas3d');
+    const ctx = canvas.getContext('2d');
+    
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    // Particle system for construction dust/debris effect
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.z = Math.random() * 1000;
+        this.size = Math.random() * 2 + 1;
+        this.speed = Math.random() * 0.5 + 0.2;
+      }
+      
+      update() {
+        this.z -= this.speed;
+        if (this.z <= 0) {
+          this.reset();
+          this.z = 1000;
+        }
+      }
+      
+      draw() {
+        const scale = 1000 / (1000 + this.z);
+        const x2d = (this.x - width / 2) * scale + width / 2;
+        const y2d = (this.y - height / 2) * scale + height / 2;
+        const size = this.size * scale;
+        
+        const opacity = 1 - (this.z / 1000);
+        ctx.fillStyle = `rgba(220, 20, 60, ${opacity * 0.3})`;
+        ctx.fillRect(x2d, y2d, size, size);
+      }
+    }
+
+    // Building/Structure wireframe
+    class Building {
+      constructor(x, y, width, height, depth) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
+        this.rotation = 0;
+      }
+      
+      update() {
+        this.rotation += 0.002;
+      }
+      
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        
+        const cos = Math.cos(this.rotation);
+        const sin = Math.sin(this.rotation);
+        
+        // Draw 3D wireframe building
+        ctx.strokeStyle = 'rgba(220, 20, 60, 0.2)';
+        ctx.lineWidth = 1;
+        
+        // Front face
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(this.width, 0);
+        ctx.lineTo(this.width, this.height);
+        ctx.lineTo(0, this.height);
+        ctx.closePath();
+        ctx.stroke();
+        
+        // Back face (with 3D offset)
+        const offsetX = this.depth * cos;
+        const offsetY = this.depth * sin * 0.5;
+        
+        ctx.beginPath();
+        ctx.moveTo(offsetX, offsetY);
+        ctx.lineTo(this.width + offsetX, offsetY);
+        ctx.lineTo(this.width + offsetX, this.height + offsetY);
+        ctx.lineTo(offsetX, this.height + offsetY);
+        ctx.closePath();
+        ctx.stroke();
+        
+        // Connecting lines
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(offsetX, offsetY);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(this.width, 0);
+        ctx.lineTo(this.width + offsetX, offsetY);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(this.width, this.height);
+        ctx.lineTo(this.width + offsetX, this.height + offsetY);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(0, this.height);
+        ctx.lineTo(offsetX, this.height + offsetY);
+        ctx.stroke();
+        
+        ctx.restore();
+      }
+    }
+
+    // Grid system (blueprint style)
+    class Grid {
+      constructor() {
+        this.offset = 0;
+        this.speed = 0.5;
+      }
+      
+      update() {
+        this.offset += this.speed;
+        if (this.offset >= 50) this.offset = 0;
+      }
+      
+      draw() {
+        ctx.strokeStyle = 'rgba(220, 20, 60, 0.05)';
+        ctx.lineWidth = 1;
+        
+        // Vertical lines
+        for (let x = -this.offset; x < width; x += 50) {
+          ctx.beginPath();
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, height);
+          ctx.stroke();
+        }
+        
+        // Horizontal lines
+        for (let y = -this.offset; y < height; y += 50) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(width, y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Rotating blueprint circles
+    class BlueprintCircle {
+      constructor(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotationSpeed = (Math.random() - 0.5) * 0.01;
+        this.segments = 8;
+      }
+      
+      update() {
+        this.rotation += this.rotationSpeed;
+      }
+      
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        
+        // Outer circle
+        ctx.strokeStyle = 'rgba(220, 20, 60, 0.15)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(0, 0, this.radius, 0, Math.PI * 2);
+        ctx.stroke();
+        
+        // Inner segments
+        for (let i = 0; i < this.segments; i++) {
+          const angle = (Math.PI * 2 / this.segments) * i;
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.lineTo(
+            Math.cos(angle) * this.radius,
+            Math.sin(angle) * this.radius
+          );
+          ctx.stroke();
+        }
+        
+        // Center point
+        ctx.fillStyle = 'rgba(220, 20, 60, 0.3)';
+        ctx.beginPath();
+        ctx.arc(0, 0, 5, 0, Math.PI * 2);
+        ctx.fill();
+        
+        ctx.restore();
+      }
+    }
+
+    // Initialize elements
+    const particles = Array.from({ length: 100 }, () => new Particle());
+    const buildings = [
+      new Building(100, height - 400, 150, 300, 100),
+      new Building(width - 350, height - 350, 180, 250, 120),
+      new Building(width / 2 - 100, height - 450, 200, 350, 150)
+    ];
+    const grid = new Grid();
+    const circles = [
+      new BlueprintCircle(width * 0.2, height * 0.3, 100),
+      new BlueprintCircle(width * 0.8, height * 0.6, 80),
+      new BlueprintCircle(width * 0.5, height * 0.8, 120)
+    ];
+
+    // Animation loop
+    function animate() {
+      ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
+      ctx.fillRect(0, 0, width, height);
+      
+      grid.update();
+      grid.draw();
+      
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      
+      buildings.forEach(b => {
+        b.update();
+        b.draw();
+      });
+      
+      circles.forEach(c => {
+        c.update();
+        c.draw();
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+
+    // Menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+
+    // Event modal functionality
+    const eventData = {
+      1: {
+        title: "Structural Design Challenge",
+        description: "This exciting civil engineering challenge tests your structural design capabilities and innovative thinking. Participants will engage in hands-on activities that simulate real-world engineering problems, analyzing load-bearing structures and optimizing designs for maximum efficiency and safety. Teams will be evaluated on creativity, structural integrity, and adherence to engineering principles.",
+        image: "assets/images/caryatid/event1.jpg"
+      },
+      2: {
+        title: "Bridge Building Competition",
+        description: "Design and construct bridges using provided materials that can withstand maximum load. This competition brings together the best minds to solve complex engineering problems and showcase their technical expertise in structural design, material science, and construction techniques. The winning bridge will demonstrate optimal strength-to-weight ratio and innovative design.",
+        image: "assets/images/caryatid/event2.jpg"
+      },
+      3: {
+        title: "CAD Modeling Contest",
+        description: "An innovative design competition that challenges participants to think outside the box using Computer-Aided Design software. Create detailed 3D models of architectural and structural elements, demonstrating precision, creativity, and technical skill. Participants will present their designs to industry experts and fellow engineers for evaluation.",
+        image: "assets/images/caryatid/event3.jpg"
+      },
+      4: {
+        title: "Concrete Mix Workshop",
+        description: "A technical workshop combining theoretical knowledge with practical application in concrete technology. Learn about different concrete mix designs, admixtures, and testing procedures from industry professionals. Participants will get hands-on experience creating and testing their own concrete mixes for various applications.",
+        image: "assets/images/caryatid/event4.jpg"
+      },
+      5: {
+        title: "Geotechnical Engineering Quiz",
+        description: "Test your knowledge of soil mechanics, foundation engineering, and geotechnical principles in this comprehensive quiz competition. Covering topics from soil classification to slope stability analysis, this event challenges participants' understanding of the fundamental principles that support all civil engineering structures.",
+        image: "assets/images/caryatid/event5.jpg"
+      },
+      6: {
+        title: "Surveying Championship",
+        description: "Demonstrate precision and accuracy in land surveying techniques using modern and traditional surveying instruments. This hands-on competition tests participants' skills in measurement, data collection, and spatial analysis. Teams will complete various surveying challenges under time constraints, showcasing their technical proficiency and teamwork.",
+        image: "assets/images/caryatid/event6.jpg"
+      }
+    };
+
+    const modal = document.getElementById('eventModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const closeModal = document.querySelector('.close-modal');
+
+    document.querySelectorAll('.event-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const eventId = this.getAttribute('data-event');
+        const event = eventData[eventId];
+        
+        modalImage.src = event.image;
+        modalTitle.textContent = event.title;
+        modalDescription.textContent = event.description;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section, .event-item, .schedule-table').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

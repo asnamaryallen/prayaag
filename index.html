@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PRAYAAG 5.0</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
 
   <style>
@@ -315,30 +314,32 @@ html {
 
   <ul class="nav-links" id="nav-links">
     <li><a href="#vistara">Vistara</a></li>
-    <li><a href="#caryatid">Caryatid</a></li>
-    <li><a href="#codex">Codex</a></li>
+    <li><a href="./associations/caryatid.html">Caryatid</a></li>
+    <li><a href="./associations/codex.html">Codex</a></li>
     <li><a href="#gallery">Gallery</a></li>
   </ul>
 </nav>
 
-
-
-  <!-- HERO -->
   <section class="hero">
-    
-   <p class="presenter">LBS INSTITUTE OF TECHNOLOGY FOR WOMEN PRESENTS
-   </p>
-    <!-- LOGO -->
-   <img src="assets/images/logo.png.png" alt="Prayag Logo" class="logo">
+    <small>LBS INSTITUTE OF TECHNOLOGY FOR WOMEN PRESENTS</small>
+
+    <model-viewer 
+    src="assets/models/logo.glb" 
+    autoplay
+    auto-rotate 
+    preload
+    rotation="0deg 0deg 0deg"
+    rotation-per-second="30deg" 
+    style="width: 400px; max-width: 80vw; height: 400px; margin: 30px auto">
+    </model-viewer>
 
     <h1>PRAYAAG 5.0</h1>
     <h2>CODE · CREATE · CONSTRUCT</h2>
 	<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
 
-    <p style="margin-top:20px;">January 31 & February 01, 2026</p>
+    <p>January 31 & February 01, 2026</p>
 
-    <!-- COUNTDOWN -->
     <div class="countdown" id="countdown">
       <div class="time-box">
         <span id="days">00</span>
@@ -360,20 +361,20 @@ html {
   </section>
 
   <section class="section">
-  <h2>Our Associations</h2>
+  <h2 class="reveal">Our Associations</h2>
   <div class="associations">
 
-    <a href="vistara.html" class="card" id="vistara">
+    <a href="vistara.html" class="card reveal" id="vistara">
       <h3>VISTARA</h3>
       <p>Innovation & technical exploration wing</p>
     </a>
 
-    <a href="caryatid.html" class="card" id="caryatid">
+    <a href="./associations/caryatid.html" class="card reveal" id="caryatid">
       <h3>CARYATID</h3>
       <p>Creative and design-driven association</p>
     </a>
 
-    <a href="codex.html" class="card" id="codex">
+    <a href="./associations/codex.html" class="card reveal" id="codex">
       <h3>CODEX</h3>
       <p>Coding & problem-solving core</p>
     </a>
@@ -381,27 +382,26 @@ html {
   </div>
 </section>
 
-
   <!-- GALLERY -->
-  <section class="section" id="gallery">
-    <h2>Moments from Prayaag</h2>
+  <section class="section reveal" id="gallery">
+    <h2 >Moments from Prayaag</h2>
     <div class="gallery">
-      <img src="images/gallery1.jpg">
-      <img src="images/gallery2.jpg">
-      <img src="images/gallery3.jpg">
-      <img src="images/gallery4.jpg">
-      <img src="images/gallery5.jpg">
-      <img src="images/gallery6.jpg">
+      <img src="./assets/images/gallery1.jpg">
+      <img src="./assets/images/gallery2.jpg">
+      <img src="./assets/images/gallery3.jpg">
+      <img src="./assets/images/gallery4.jpg">
+      <img src="./assets/images/gallery5.jpg">
+      <img src="./assets/images/gallery6.jpg">
+      <img src="./assets/images/gallery7.jpg">
+      <img src="./assets/images/gallery8.jpg">
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p><span>PRAYAAG 5.0</span> · LBS Institute of Technology for Women</p>
     <p>© 2026 Prayaag. All rights reserved.</p>
   </footer>
 
-  <!-- COUNTDOWN SCRIPT -->
   <script>
     const targetDate = new Date("Jan 31, 2026 09:00:00").getTime();
 
@@ -424,21 +424,27 @@ html {
     navLinks.classList.toggle("show");
   });
 
-  // Close menu when clicking a link
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("show");
     });
   });
-</script>
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    loader.style.opacity = "0";
-    setTimeout(() => loader.style.display = "none", 500);
+
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  }, {
+    threshold: 0.15
   });
+
+  reveals.forEach(el => observer.observe(el));
 </script>
-
-
 </body>
 </html>
