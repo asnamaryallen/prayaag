@@ -428,15 +428,16 @@ html {
     align-items: center;
   }
 
-  model-viewer {
-    width: 160px !important;
-    height: 160px !important;
-    margin: 20px auto !important;
-    display: block
+  .hero model-viewer {
+    width: 250px !important;
+    height: 200px ;
+    display: block;
+    margin: 0 auto 20px auto !important;
   }
 
   .hero h1 {
     font-size: 2.8rem;
+    margin: 0 !important; 
   }
 
   .hero h2 {
