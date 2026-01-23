@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,6 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
   background: #0a0a0a;
   color: #fff;
   overflow-x: hidden;
@@ -79,7 +79,6 @@ body::before {
   color: #e0e0e0;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  font-family: "Montserrat";
   text-decoration: none;
   transition: 0.3s;
 }
@@ -148,7 +147,7 @@ body::before {
   font-size: clamp(1.2rem,3vw,1.8rem);
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #dc143c;
+  color: #dc143c; 
   animation: fadeInUp 1s ease-out 0.6s backwards;
 }
 
@@ -447,14 +446,15 @@ body::before {
 .video-container video { width: 100%; display: block; aspect-ratio: 16/9; }
 
 
-
 .hero-bg-logo {
   position: absolute;
   width: 850px;
   opacity: 0.20;
   z-index: 0;
+  max-width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
   filter: blur(0.5px);
-  animation: logoFloat 6s ease-in-out infinite, fadeInScale 1.5s ease forwards;
 }
 
 .hero h1, .hero p { position: relative; z-index: 2; }
@@ -470,7 +470,6 @@ body::before {
   height: 120px;
 }
 
-/* FOOTER */
 .prayaag-footer a {
   color: #ffffff;
   text-decoration: none;
@@ -483,8 +482,8 @@ body::before {
 }
 
 .prayaag-footer {
-  background: rgba(106, 4, 15, 0.2);   /* same as navbar */
-  backdrop-filter: blur(10px);        /* glass effect */
+  background: rgba(106, 4, 15, 0.2);   
+  backdrop-filter: blur(10px);        
   -webkit-backdrop-filter: blur(10px);
 
   color: #fff;
@@ -493,7 +492,6 @@ body::before {
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 
-/* CONTAINER */
 .footer-container {
   max-width: 1100px;
   margin: auto;
@@ -505,7 +503,6 @@ body::before {
   align-items: flex-start;
 }
 
-/* LEFT */
 .footer-left h2 {
    font-family: "ZenDots";
   font-size: 2.1rem;
@@ -583,6 +580,12 @@ body::before {
   color: #ff2a2a;
 }
 
+.schedule-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .footer-container {
@@ -594,18 +597,23 @@ body::before {
   .footer-socials {
     justify-content: center;
   }
-}
 
+  .navbar {
+    padding: 0 16px;  
+  }
 
-@media (max-width:768px) {
-  .menu-toggle { display: block; }
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .menu-toggle { display: block; font-size: 2rem; }
   .nav-links { position: absolute; top: 70px; left: 0; width: 100%; background: #000; flex-direction: column; align-items: center; display: none; border-top: 1px solid #222; }
   .nav-links li { padding: 15px 0; }
   .nav-links.show { display: flex; }
   .hero-logo { width: 100px; }
   .section { padding: 3rem 1.5rem; }
-  .section::before { width: 120px; height: 120px; right: -30px; }
-  .section:nth-child(even)::before { left: -30px; }
+  .section::before { width: 120px; height: 120px; right: 0px; left: auto; }
+  .section:nth-child(even)::before { left: 0px; right: auto;}
   .events-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
   .event-item img { height: 250px; }
   .modal-content img { height: 300px; }
@@ -616,18 +624,23 @@ body::before {
   .about-container { flex-direction: column; text-align: center; }
   .about-text h2, .about-text p { text-align: center; }
   .about-logo { width: 180px; }
+  .hero h1 {
+    font-size: clamp(3rem, 9vw, 4rem);
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    padding: 0 1rem;
+  }
+
+  .section h2 {
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
 }
 
 @font-face {
         font-family: "ZenDots";
         src: url("../assets/webfonts/ZenDots-Regular.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: "Orbitron";
-        src: url("./assets/webfonts/Orbitron-VariableFont_wght.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
     }
