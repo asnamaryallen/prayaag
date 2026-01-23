@@ -60,6 +60,7 @@
 
     <section class="section">
       <h2>Event Schedule</h2>
+      <div class="schedule-wrapper">
       <table class="schedule-table">
         <thead>
           <tr>
@@ -97,6 +98,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </section>
 
     <section class="section">
@@ -444,14 +446,12 @@
     animate();
 
     // Menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+    const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    }
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
     // Event modal functionality
     const eventData = {
