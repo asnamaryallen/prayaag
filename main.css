@@ -411,7 +411,6 @@ html {
   transform: translateY(0);
 }
 
-/* ================= MOBILE OPTIMIZATION ================= */
 @media (max-width: 600px) {
 
   .navbar {
