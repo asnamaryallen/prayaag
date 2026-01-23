@@ -32,6 +32,14 @@
       <h1>CODEX</h1>
       <p class="hero-tagline">Building Tomorrow's Infrastructure</p>
       <p class="hero-intro">The Computer Engineering Department Association of LBS Institute of Technology for Women, dedicated to shaping future engineers through innovation, collaboration, and technical excellence at PRAYAAG 5.0.</p>
+    
+  
+<!-- Main Register Button for Codex - SIMPLE LINK -->
+<div class="register-container">
+  <a href="#our-events" class="hero-register-btn">
+    <span>Register for Events →</span>
+  </a>
+</div>
     </section>
 
     <section class="section about-section">
@@ -66,6 +74,7 @@
             <th>Day</th>
             <th>Event</th>
             <th>Time</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -73,34 +82,40 @@
             <td class="day-header" rowspan="3">Day 1</td>
             <td class="event-name">Structural Design Challenge</td>
             <td class="event-time">10:00 AM - 1:00 PM</td>
+           
           </tr>
           <tr>
             <td class="event-name">Concrete Mix Design Workshop</td>
             <td class="event-time">2:00 PM - 4:30 PM</td>
+            
           </tr>
           <tr>
             <td class="event-name">Bridge Building Competition</td>
             <td class="event-time">5:00 PM - 8:00 PM</td>
+            
           </tr>
           <tr>
             <td class="day-header" rowspan="3">Day 2</td>
             <td class="event-name">Geotechnical Engineering Quiz</td>
             <td class="event-time">9:30 AM - 12:00 PM</td>
+           
           </tr>
           <tr>
             <td class="event-name">Sustainable Construction Seminar</td>
             <td class="event-time">1:30 PM - 4:00 PM</td>
+           
           </tr>
           <tr>
             <td class="event-name">CAD Modeling Contest</td>
             <td class="event-time">4:30 PM - 7:30 PM</td>
+            
           </tr>
         </tbody>
       </table>
-      </div>
+    </div>
     </section>
 
-    <section class="section">
+    <section id="our-events" class="section">
       <h2>Our Events</h2>
       <div class="events-grid">
         <div class="event-item" data-event="1">
@@ -108,6 +123,7 @@
           <div class="event-overlay">
             <h3>Structural Design Challenge</h3>
             <p>Test your structural analysis and design skills with real-world scenarios</p>
+            <a href="https://forms.google.com/example1" target="_blank" class="event-register-btn">Register Now</a>
           </div>
         </div>
 
@@ -116,6 +132,7 @@
           <div class="event-overlay">
             <h3>Bridge Building Competition</h3>
             <p>Design and construct bridges that can withstand maximum load</p>
+            <a href="https://forms.google.com/example1" target="_blank" class="event-register-btn">Register Now</a>
           </div>
         </div>
 
@@ -124,6 +141,7 @@
           <div class="event-overlay">
             <h3>CAD Modeling Contest</h3>
             <p>Showcase your technical drawing and 3D modeling expertise</p>
+            <a href="https://forms.google.com/example1" target="_blank" class="event-register-btn">Register Now</a>
           </div>
         </div>
 
@@ -132,6 +150,7 @@
           <div class="event-overlay">
             <h3>Concrete Mix Workshop</h3>
             <p>Learn and experiment with different concrete mix designs</p>
+            <a href="https://forms.google.com/example1" target="_blank" class="event-register-btn">Register Now</a>
           </div>
         </div>
 
@@ -140,6 +159,7 @@
           <div class="event-overlay">
             <h3>Geotechnical Quiz</h3>
             <p>Test your knowledge of soil mechanics and foundation engineering</p>
+            <a href="https://forms.google.com/example1" target="_blank" class="event-register-btn">Register Now</a>
           </div>
         </div>
 
@@ -148,6 +168,7 @@
           <div class="event-overlay">
             <h3>Surveying Championship</h3>
             <p>Demonstrate precision in land surveying techniques</p>
+            <a href="https://forms.google.com/example1" target="_blank" class="event-register-btn">Register Now</a>
           </div>
         </div>
       </div>
@@ -160,6 +181,7 @@
         <div class="modal-details">
           <h3 id="modalTitle"></h3>
           <p id="modalDescription"></p>
+          <a id="modalRegisterBtn" href="#" target="_blank" class="modal-register-btn">Register for this Event</a>
         </div>
       </div>
     </div>
@@ -445,15 +467,12 @@
     
     animate();
 
-    // Menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+    const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    }
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
     // Event modal functionality
     const eventData = {
@@ -541,6 +560,8 @@
       el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
       observer.observe(el);
     });
+    
+      
   </script>
 </body>
 </html>
