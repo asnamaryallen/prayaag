@@ -96,7 +96,6 @@ html {
     font-size: 0.8rem;
   }
 }
-
     .hero {
       min-height: 100vh;
       display: flex;
@@ -107,6 +106,7 @@ html {
       padding: 90px 20px 40px;
       background: url('./assets/images/bg2.jpg') center/cover no-repeat;
       background-size: cover;
+      background-attachment: scroll;
     }
 
     model-viewer {
@@ -411,4 +411,80 @@ html {
   transform: translateY(0);
 }
 
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 600px) {
 
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding-top: 120px;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  model-viewer {
+    height: 260px;
+    max-width: 260px;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .time-box {
+    min-width: 70px;
+    padding: 12px 10px;
+  }
+
+  .time-box span {
+    font-size: 1.6rem;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .associations {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 25px 15px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-middle h4,
+  .footer-right h4 {
+    font-size: 0.9rem;
+  }
+}
