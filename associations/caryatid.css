@@ -643,11 +643,7 @@ body::before {
         font-weight: normal;
         font-style: normal;
     }
-/* ===========================================
-   REGISTER BUTTON STYLES
-   =========================================== */
 
-/* Hero Register Button */
 .register-container {
   margin-top: 2.5rem;
   text-align: center;
