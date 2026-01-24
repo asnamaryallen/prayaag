@@ -28,10 +28,7 @@ body::before {
   z-index: 0;
   pointer-events: none;
 }
-.content-wrapper {
-  position: relative;
-  z-index: 1;
-}
+
 #canvas3d {
   position: fixed;
   top: 0;
@@ -42,7 +39,10 @@ body::before {
   pointer-events: none;
 }
 
-
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
 
 .navbar {
   position: fixed;
@@ -385,7 +385,7 @@ body::before {
 }
 
 .modal-details { 
-  padding: 1.5rem; 
+  padding: 2.5rem; 
 }
 
 .modal-details h3 { 
@@ -643,7 +643,6 @@ body::before {
         font-weight: normal;
         font-style: normal;
     }
-
 /* ===========================================
    REGISTER BUTTON STYLES
    =========================================== */
@@ -828,142 +827,4 @@ body::before {
     pointer-events: all;
   }
 }
-/* Event Item with hover overlay */
-.event-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  height: 300px; /* Fixed height */
-}
 
-.event-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.event-item:hover img {
-  transform: scale(1.05);
-}
-
-/* Overlay - hidden by default */
-.event-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-/* Show overlay on hover */
-.event-item:hover .event-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.event-overlay h3 {
-  color: #fff;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease 0.1s;
-}
-
-.event-overlay p {
-  color: #ccc;
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease 0.2s;
-  line-height: 1.5;
-}
-
-/* Register button - also hidden until hover */
-.event-register-btn {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease 0.3s;
-  padding: 0.7rem 1.8rem;
-  background: rgba(220, 20, 60, 0.2);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  border: 1px solid rgba(220, 20, 60, 0.4);
-  font-weight: 500;
-  backdrop-filter: blur(10px);
-}
-
-/* Show text elements when overlay is visible */
-.event-item:hover .event-overlay h3,
-.event-item:hover .event-overlay p,
-.event-item:hover .event-register-btn {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.event-register-btn:hover {
-  background: rgba(220, 20, 60, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
-}
-
-.modal-content {
-  max-height: 85vh;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(220, 20, 60, 0.5) rgba(20, 20, 20, 0.3);
-}
-
-.modal-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.modal-content::-webkit-scrollbar-track {
-  background: rgba(20, 20, 20, 0.3);
-  border-radius: 4px;
-}
-
-.modal-content::-webkit-scrollbar-thumb {
-  background: rgba(220, 20, 60, 0.5);
-  border-radius: 4px;
-}
-
-.modal-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(220, 20, 60, 0.7);
-}
-
-.event-details {
-  margin-top: 1.5rem;
-  padding: 1.2rem;
-  background: rgba(20, 20, 20, 0.5);
-  border-radius: 8px;
-  border-left: 3px solid #dc143c;
-}
-
-.event-details p {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .modal-content {
-    max-height: 90vh;
-    margin: 1rem;
-  }
-  
-  .modal-details {
-    padding: 1rem;
-  }
-}
