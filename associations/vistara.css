@@ -20,7 +20,7 @@ body::before {
   transform: translate(-50%, -50%);
   width: 60vw;
   height: 60vh;
-  background-image: url('assets/images/caryatid-logo.png');
+  background-image: url('assets/images/vistara-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
