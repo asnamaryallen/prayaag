@@ -20,7 +20,7 @@ body::before {
   transform: translate(-50%, -50%);
   width: 60vw;
   height: 60vh;
-  background-image: url('assets/images/caryatid-logo.png');
+  background-image: url('assets/images/vistara-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -385,7 +385,7 @@ body::before {
 }
 
 .modal-details { 
-  padding: 2.5rem; 
+  padding: 1.5rem; 
 }
 
 .modal-details h3 { 
@@ -734,14 +734,14 @@ body::before {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.5rem;
-  background: rgba(187, 3, 178, 0.4);
-  color: white;
+  background: rgba(203, 12, 228, 0.4);
+  color: #49105f;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 500;
   font-size: 0.85rem;
   transition: all 0.3s ease;
-  border: 1px solid rgba(148, 3, 141, 0.4);
+  border: 1px solid rgba(203, 12, 228, 0.4);
   backdrop-filter: blur(5px);
   opacity: 0;
   transform: translateY(10px);
@@ -758,15 +758,14 @@ body::before {
 }
 
 .event-register-btn:hover {
-  background: rgba(241, 5, 229, 0.507);
+  background: rgba(214, 5, 241, 0.507);
   transform: translateY(-2px);
   border-color: rgba(130, 5, 146, 0.4);
   box-shadow: 
-    0 4px 15px rgba(182, 3, 206, 0.507),
+    0 4px 15px rgba(123, 2, 139, 0.507),
     0 2px 8px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(203, 12, 228, 0.4);
 }
-
 /* Modal Register Button */
 .modal-register-btn {
   display: inline-block;
@@ -822,4 +821,142 @@ body::before {
     pointer-events: all;
   }
 }
+/* Event Item with hover overlay */
+.event-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 300px; /* Fixed height */
+}
 
+.event-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.event-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay - hidden by default */
+.event-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+/* Show overlay on hover */
+.event-item:hover .event-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event-overlay h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease 0.1s;
+}
+
+.event-overlay p {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease 0.2s;
+  line-height: 1.5;
+}
+
+/* Register button - also hidden until hover */
+.event-register-btn {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease 0.3s;
+  padding: 0.7rem 1.8rem;
+  background: rgba(173, 4, 196, 0.4);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid rgba(86, 1, 97, 0.4);
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+/* Show text elements when overlay is visible */
+.event-item:hover .event-overlay h3,
+.event-item:hover .event-overlay p,
+.event-item:hover .event-register-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event-register-btn:hover {
+  background: rgba(214, 5, 241, 0.507);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(226, 7, 255, 0.4);
+}
+
+.modal-content {
+  max-height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(220, 20, 60, 0.5) rgba(20, 20, 20, 0.3);
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(20, 20, 20, 0.3);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(220, 20, 60, 0.5);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 20, 60, 0.7);
+}
+
+.event-details {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(20, 20, 20, 0.5);
+  border-radius: 8px;
+  border-left: 3px solid #dc143c;
+}
+
+.event-details p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 90vh;
+    margin: 1rem;
+  }
+  
+  .modal-details {
+    padding: 1rem;
+  }
+}
