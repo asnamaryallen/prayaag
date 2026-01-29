@@ -38,11 +38,12 @@
     <model-viewer 
     src="assets/models/logo.glb" 
     autoplay
-    auto-rotate 
+    auto-rotate
     preload
     rotation="0deg 0deg 0deg"
     rotation-per-second="30deg" 
-    style="width: 400px; max-width: 80vw; height: 400px; margin: 30px auto">
+    style="width: 400px; max-width: 80vw; height: 400px; margin: 30px auto"
+    background-color="transparent" >
     </model-viewer>
 
     <h1>PRAYAAG 5.0</h1>
@@ -98,14 +99,12 @@
   <section class="section reveal" id="gallery">
     <h2 >Moments from Prayaag</h2>
     <div class="gallery">
-      <img src="./assets/images/gallery1.jpg">
-      <img src="./assets/images/gallery2.jpg">
-      <img src="./assets/images/gallery3.jpg">
-      <img src="./assets/images/gallery4.jpg">
-      <img src="./assets/images/gallery5.jpg">
-      <img src="./assets/images/gallery6.jpg">
-      <img src="./assets/images/gallery7.jpg">
-      <img src="./assets/images/gallery8.jpg">
+      <img src="./assets/images/gallery1.jpeg">
+      <img src="./assets/images/gallery2.jpeg">
+      <img src="./assets/images/gallery3.jpeg">
+      <img src="./assets/images/gallery4.jpeg">
+      <img src="./assets/images/gallery5.jpeg">
+      <img src="./assets/images/gallery6.jpeg">
     </div>
   </section>
 
@@ -190,12 +189,14 @@
   });
 
   reveals.forEach(el => observer.observe(el));
-</script>
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    loader.style.display = "none";
-  });
+
+  const model = document.getElementById("logo-model");
+
+model.addEventListener("load", () => {
+    model.style.transition = "opacity 0.6s ease-in-out";
+    model.style.opacity = 1;
+});
+
 </script>
 
 </body>
