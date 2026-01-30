@@ -517,7 +517,7 @@
   </div>
 </footer>
 
-  <script>
+ <script>
     // 3D Canvas Animation
     const canvas = document.getElementById('canvas3d');
     const ctx = canvas.getContext('2d');
@@ -787,21 +787,23 @@ const eventData = {
   14: { title: "Tower of Tension", htmlId: "event14Details" }
 };
 
-// Modal elements
 const modal = document.getElementById('eventModal');
-const modalImage = document.getElementById('modalImage');
-const modalTitle = document.getElementById('modalTitle');
-const modalDescription = document.getElementById('modalDescription');
-const closeModal = document.querySelector('.close-modal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const closeModal = document.querySelector('.close-modal');
 
-// Hide all event details
-function hideAllEventDetails() {
-  document.querySelectorAll('[id$="Details"]').forEach(el => el.style.display = "none");
-  modalDescription.style.display = "none";
-}
+    // Function to hide all event details
+    function hideAllEventDetails() {
+      // Hide all details divs
+      document.querySelectorAll('[id$="Details"]').forEach(el => {
+        el.style.display = "none";
+      });
+      // Also hide the text description
+      modalDescription.style.display = "none";
+    }
 
-// Show modal on event click
-document.querySelectorAll('.event-item').forEach(item => {
+    document.querySelectorAll('.event-item').forEach(item => {
   item.addEventListener('click', function(e) {
     if (e.target.classList.contains('event-register-btn')) return;
 
@@ -825,44 +827,47 @@ document.querySelectorAll('.event-item').forEach(item => {
   });
 });
 
-// Close modal functions
-closeModal.addEventListener('click', () => {
-  modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
-});
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('active')) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
 
-// Scroll animations
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, observerOptions);
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
 
-document.querySelectorAll('.section, .event-item, .schedule-table').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-  observer.observe(el);
-});
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
 
+    document.querySelectorAll('.section, .event-item, .schedule-table').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>
