@@ -669,3 +669,27 @@ html {
     font-size: 0.9rem;
   }
 }
+/* FIX mobile overlay issue */
+@media (max-width: 768px) {
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;   /* real mobile height */
+    min-height: 100vh;
+    z-index: 99999;
+  }
+
+  header,
+  nav,
+  main,
+  section {
+    display: none;
+  }
+}
