@@ -254,6 +254,23 @@ const launchTime = new Date(2026, 0, 31, 20, 0, 0).getTime(); // month is 0-inde
   // Update every second
   const timer = setInterval(updateCountdown, 1000);
 </script>
+<script>
+  // Remove injected "Views" counter (runs repeatedly)
+  setInterval(() => {
+    document.querySelectorAll("body *").forEach(el => {
+      if (
+        el.innerText &&
+        el.innerText.toLowerCase().includes("views")
+      ) {
+        const style = window.getComputedStyle(el);
+        if (style.position === "fixed" || style.position === "absolute") {
+          el.remove();
+        }
+      }
+    });
+  }, 500);
+</script>
+
 
 </body>
 </html>

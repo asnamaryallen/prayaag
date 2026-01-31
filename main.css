@@ -359,6 +359,27 @@ html {
       color: #e0e0e0;
       margin-top: 5px;
     }
+    /* Hide public view counter injected by hosting */
+div,
+span {
+  font-family: inherit;
+}
+
+div:has-text("Views"),
+span:has-text("Views") {
+  display: none !important;
+}
+
+/* fallback for browsers without :has-text */
+*[style*="fixed"][style*="bottom"] {
+  display: none !important;
+}
+
+/* FORCE HIDE view counter badge */
+body > div[style*="position: fixed"] {
+  display: none !important;
+}
+
 
     .section {
       padding: 80px 20px;
