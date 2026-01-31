@@ -15,6 +15,16 @@
  
 </head>
 <body>
+  <div id="overlay">
+  <h1>PRAYAAG 5.0 Launching Soon!</h1>
+  <div class="overlay-countdown" id="overlay-countdown">
+  <span id="overlay-days" data-label="DAYS">00</span>
+  <span id="overlay-hours" data-label="HOURS">00</span>
+  <span id="overlay-minutes" data-label="MINUTES">00</span>
+  <span id="overlay-seconds" data-label="SECONDS">00</span>
+</div>
+
+</div>
 	<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-logo">PRAYAAG 5.0</div>
@@ -204,6 +214,45 @@ model.addEventListener("load", () => {
     model.style.opacity = 1;
 });
 
+</script>
+<script>
+  const overlay = document.getElementById("overlay");
+  const overlayDays = document.getElementById("overlay-days");
+  const overlayHours = document.getElementById("overlay-hours");
+  const overlayMinutes = document.getElementById("overlay-minutes");
+  const overlaySeconds = document.getElementById("overlay-seconds");
+
+  // Hard-coded launch date and time: Jan 31, 2026, 16:50
+  // Hard-coded launch date and time: Jan 31, 2026, 17:00
+const launchTime = new Date(2026, 0, 31, 19, 0, 0).getTime(); // month is 0-indexed
+ // month is 0-indexed
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = launchTime - now;
+
+    if (diff <= 0) {
+      // Launch time has passed → hide overlay permanently
+      overlay.style.display = "none";
+      clearInterval(timer);
+    } else {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      overlayDays.innerText = days;
+      overlayHours.innerText = hours;
+      overlayMinutes.innerText = minutes;
+      overlaySeconds.innerText = seconds;
+    }
+  }
+
+  // Initial check
+  updateCountdown();
+
+  // Update every second
+  const timer = setInterval(updateCountdown, 1000);
 </script>
 
 </body>
