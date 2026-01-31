@@ -105,13 +105,7 @@
   </div>
 </section>
 </section>
-<section class="proshow-wrapper reveal">
-  <h2 class="proshow-heading">PROSHOW</h2>
 
-  <div class="proshow-image"></div>
-
- <a href="https://makemypass.com/event/srishti-live" class="proshow-btn">Register</a>
-</section>
   <!-- GALLERY -->
   <section class="section reveal" id="gallery">
     <h2 >Moments from Prayaag</h2>
@@ -222,9 +216,9 @@ model.addEventListener("load", () => {
   const overlayMinutes = document.getElementById("overlay-minutes");
   const overlaySeconds = document.getElementById("overlay-seconds");
 
-  // Hard-coded launch date and time: Jan 31, 2026, 16:50
-  // Hard-coded launch date and time: Jan 31, 2026, 17:00
-const launchTime = new Date(2026, 1, 5, 20, 0, 0).getTime(); // month is 0-indexed
+ 
+  // Hard-coded launch date and time: feb 1, 2026, 11:00am
+const launchTime = new Date(2026, 1, 1, 11, 0, 0).getTime(); // month is 0-indexed
  // month is 0-indexed
 
   function updateCountdown() {
